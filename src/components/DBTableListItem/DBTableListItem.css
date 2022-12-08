@@ -1,0 +1,20 @@
+.table-info__content-details li:before {
+    content: "";
+}
+.table-info__content li div:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -13px;
+    bottom: 50%;
+    width: 10px;
+    border: 2px solid rgb(226 232 240);
+    border-top: 0 transparent;
+    border-right: 0 transparent;
+}
+
+.table-info__content-details li {
+    /* padding-top: 4px; */
+    font-size: 12px;
+    line-height: 20px;
+}
