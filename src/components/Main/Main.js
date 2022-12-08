@@ -12,7 +12,7 @@ const sideContainerMinWidth = 40
 const Main = (props) => {
     const [collapseLeft, setCollapseLeft] = useState(false)
     const [collapseRight, setCollapseRight] = useState(false)
-    const { isDisabled } = props
+    const { setShowConnectionModal, dbConnectionList } = props
     return <div className={`top-14 fixed left-0 right-0 bottom-5`}>
         {/* {!isDisabled ? <> */}
         {collapseLeft ?
@@ -47,7 +47,7 @@ const Main = (props) => {
             <div className="h-full">
                 {!collapseLeft ? <>
                     <div className="px-5 py-2 text-sm border-y text-gray-700 font-semibold border-slate-200">Database Connections</div>
-                    <DBConnectionList />
+                    <DBConnectionList dbConnectionList={dbConnectionList} setShowConnectionModal={setShowConnectionModal} />
                 </> : null}
             </div>
             <SplitPane
