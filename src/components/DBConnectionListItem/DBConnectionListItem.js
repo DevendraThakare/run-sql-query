@@ -10,14 +10,14 @@ const DBConnectionListItem = (props) => {
                     {`${connection.user}@${connection.host}`}
                 </div>
             </div>
-            <TrashIcon onClick={(e) => { e.stopPropagation(); deleteConnection(connection) }} className="w-4 cursor-pointer text-gray-500" />
+            <TrashIcon title="Delete database connection" onClick={(e) => { e.stopPropagation(); deleteConnection(connection) }} className="w-4 cursor-pointer text-gray-500" />
         </div>
         <div className="flex flex-row justify-between">
             <div className="text-gray-500 font-semibold text-xs">Database: {connection.database}</div>
-            {!connection.connected ? <div onClick={(e) => { e.stopPropagation(); changeConnectionStatus(connection, true) }} className="flex flex-row text-blue-700 font-semibold text-xs cursor-pointer">
+            {!connection.connected ? <div title="Connect database connection" onClick={(e) => { e.stopPropagation(); changeConnectionStatus(connection, true) }} className="flex flex-row text-blue-700 font-semibold text-xs cursor-pointer">
                 <CircleStackIcon className="w-3.5 mr-1" /> Connect
             </div>
-                : <div onClick={(e) => { e.stopPropagation(); changeConnectionStatus(connection, false) }} className="flex flex-row text-red-700 font-semibold text-xs cursor-pointer">
+                : <div title="Disconnect database connection" onClick={(e) => { e.stopPropagation(); changeConnectionStatus(connection, false) }} className="flex flex-row text-red-700 font-semibold text-xs cursor-pointer">
                     <NoSymbolIcon className="w-3.5 mr-1"  />Disconnect
                 </div>}
         </div>

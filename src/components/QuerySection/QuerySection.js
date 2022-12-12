@@ -4,7 +4,7 @@ import QueryResult from '../QueryResult'
 import CodeMirror from '@uiw/react-codemirror';
 import { sql } from '@codemirror/lang-sql';
 import Spinner from '../../components/Spinner/Spinner'
-import { ArrowDownTrayIcon, PlayIcon, ClipboardDocumentIcon } from '@heroicons/react/24/outline'
+import { ArrowDownTrayIcon, PlayIcon, ClipboardDocumentIcon, ChartBarIcon } from '@heroicons/react/24/outline'
 import apiClient from '../../utils/axios'
 
 const code = `-- Online SQL Editor to Run SQL Online.                            
@@ -66,10 +66,10 @@ const QuerySection = (props) => {
         <div className="h-full w-full relative">
             <div className="sticky top-0 z-10 p-1 bg-slate-50 shadow">
                 <div className="flex flex-row">
-                    <button onClick={runQuery} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-4 rounded py-1.5 text-xs font-semibold">
+                    <button title="Run Query" onClick={runQuery} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-4 rounded py-1.5 text-xs font-semibold">
                         <PlayIcon className="w-4 mr-1" />Run SQL
                     </button>
-                    <button onClick={() => { navigator.clipboard.writeText(query) }} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-4 rounded py-1.5 text-xs font-semibold">
+                    <button title="Copy Query" onClick={() => { navigator.clipboard.writeText(query) }} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-4 rounded py-1.5 text-xs font-semibold">
                         <ClipboardDocumentIcon className="w-4 mr-1" />Copy
                     </button>
                 </div>
@@ -86,14 +86,15 @@ const QuerySection = (props) => {
             {fetchingQueryResult ? <div className="w-full h-full flex items-center justify-center">
                 <Spinner size="small" />
             </div> : null}
-            <div className="flex flex-row justify-between p-1 font-bolder sticky bg-white border-y border-slate-200 top-0 w-full">
+            <div className="flex flex-row justify-between p-1 px-4 font-bolder sticky bg-white border-y border-slate-200 top-0 w-full">
                 <div>
                     <span className="text-gray-500 mr-5 text-xs font-semibold">Output - </span>
                     {queryResult ? <span className="text-sm font-semibold">Total rows: {queryResult.length} of {queryResult.length}</span> : null}
 
                 </div>
-                {queryResult ? <div>
-                    <ArrowDownTrayIcon onClick={downloadCSV} className="w-5 cursor-pointer" />
+                {queryResult ? <div className="flex flex-row">
+                    <ChartBarIcon title="Generate Graph" className="w-5 cursor-pointer mr-2.5" />
+                    <ArrowDownTrayIcon title="Download CSV" onClick={downloadCSV} className="w-5 cursor-pointer" />
                 </div> : null}
             </div>
             {queryResult ? <div className="oveflow-auto">
