@@ -18,6 +18,7 @@ Demo is available at https://run-sql-query.vercel.app
 ## Framework and Plugins Used
 
 [React](https://reactjs.org/):
+A JavaScript library for building user interfaces
 
 [Tailwind](https://tailwindui.com/):
 Utility based styling framework used for styling the components.
