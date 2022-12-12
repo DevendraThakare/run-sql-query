@@ -4,9 +4,9 @@ import Footer from './components/Footer';
 import DBConnectionModal from './components/DBConnectionModal'
 import { useEffect, useState } from 'react';
 
-function App() {
-  const [dbConnectionList, setDBConnectionList] = useState([{
-
+const dbConnections = [
+  {
+    id: 1,
     db: 'MySQL',
     host: 'localhost',
     port: '3306',
@@ -16,6 +16,7 @@ function App() {
     selected: true
   },
   {
+    id: 2,
     db: 'Postgres',
     host: 'localhost',
     port: '5432',
@@ -24,8 +25,9 @@ function App() {
     connected: false,
     selected: false
   }
-
-  ])
+]
+function App() {
+  const [dbConnectionList, setDBConnectionList] = useState(dbConnections)
   const [showConnectionModal, setShowConnectionModal] = useState(false)
 
   useEffect(() => {
@@ -34,12 +36,41 @@ function App() {
     }
   }, [])
 
+  const setSelectedConnection = (connection) => {
+    const updatedDBConnectionList = [...dbConnectionList]
+    updatedDBConnectionList.forEach(item => {
+      if (connection.id === item.id) {
+        item.selected = true
+      } else {
+        item.selected = false
+      }
+    })
+    setDBConnectionList(updatedDBConnectionList)
+  }
+
+  const changeConnectionStatus = (connection, status) => {
+    const updatedDBConnectionList = [...dbConnectionList]
+    updatedDBConnectionList.forEach(item => {
+      if (connection.id === item.id) {
+        item.connected = status
+      }
+    })
+    setDBConnectionList(updatedDBConnectionList)
+  }
+
+  const deleteConnection = (connection) => {
+    const updatedDBConnectionList = dbConnectionList.filter(item => {
+      return connection.id === item.id
+    })
+    setDBConnectionList(updatedDBConnectionList)
+  }
+
   return (
     <div className="App">
       <Header />
-      <Main setShowConnectionModal={setShowConnectionModal} dbConnectionList={dbConnectionList} />
+      <Main setSelectedConnection={setSelectedConnection} changeConnectionStatus={changeConnectionStatus} deleteConnection={deleteConnection} setShowConnectionModal={setShowConnectionModal} dbConnectionList={dbConnectionList} />
       <Footer />
-      {showConnectionModal ? <DBConnectionModal onModalClose={()=>setShowConnectionModal(false)} isClosable={dbConnectionList?.length} isOpen={true} /> : null}
+      {showConnectionModal ? <DBConnectionModal onModalClose={() => setShowConnectionModal(false)} isClosable={dbConnectionList?.length} isOpen={true} /> : null}
     </div>
   );
 }

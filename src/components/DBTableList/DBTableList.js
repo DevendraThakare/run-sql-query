@@ -8,10 +8,12 @@ const DBTableList = (props) => {
     const [filteredTableData, setFilteredTableData] = useState(tableData)
 
     const searchAction = (q) => {
-        if (q.trim().length < 3) return
-        const res = tableData.filter(obj => Object.values(obj).some(val => val.includes(q)));
+        const res = tableData.filter(obj => {
+            if (obj.name.toLowerCase().includes(q.toLowerCase())) {
+                return true
+            }
+        })
         setFilteredTableData(res)
-
     }
     const debouncedSearchAction = debounce(searchAction, 250);
     useEffect(() => {

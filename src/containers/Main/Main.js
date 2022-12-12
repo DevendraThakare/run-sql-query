@@ -15,12 +15,16 @@ const sideContainerMinWidth = 2
 const Main = (props) => {
     const [collapseLeft, setCollapseLeft] = useState(false)
     const [collapseRight, setCollapseRight] = useState(false)
-    const { setShowConnectionModal, dbConnectionList } = props
+    const { setShowConnectionModal, dbConnectionList, setSelectedConnection, changeConnectionStatus, deleteConnection  } = props
     const [fetchingTableData, setFetchingTableData] = useState(false)
     const [tableData, setTableData] = useState(null)
+
     useEffect(() => {
-        fetchTableData()
+        if(dbConnectionList?.length){
+            fetchTableData()
+        }
     }, [])
+
     const fetchTableData = async () => {
         setFetchingTableData(true)
         const result = await apiClient.get('/tables.json')
@@ -85,7 +89,7 @@ const Main = (props) => {
             <div className="h-full">
                 {!collapseLeft ? <>
                     <div className="px-5 py-2 text-sm border-y text-gray-700 font-semibold border-slate-200">Database Connections</div>
-                    <DBConnectionList dbConnectionList={dbConnectionList} setShowConnectionModal={setShowConnectionModal} />
+                    <DBConnectionList setSelectedConnection={setSelectedConnection} changeConnectionStatus={changeConnectionStatus} deleteConnection={deleteConnection} dbConnectionList={dbConnectionList} setShowConnectionModal={setShowConnectionModal} />
                 </> : null}
             </div>
             <SplitPane

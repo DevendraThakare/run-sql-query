@@ -66,10 +66,10 @@ const QuerySection = (props) => {
         <div className="h-full w-full relative">
             <div className="sticky top-0 z-10 p-1 bg-slate-50 shadow">
                 <div className="flex flex-row">
-                    <button onClick={runQuery} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-5 rounded py-1.5 text-xs font-semibold">
+                    <button onClick={runQuery} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-4 rounded py-1.5 text-xs font-semibold">
                         <PlayIcon className="w-4 mr-1" />Run SQL
                     </button>
-                    <button onClick={() => { navigator.clipboard.writeText(query) }} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-5 rounded py-1.5 text-xs font-semibold">
+                    <button onClick={() => { navigator.clipboard.writeText(query) }} className="flex flex-row bg-slate-50 text-blue-700 cursor-pointer text-center px-4 rounded py-1.5 text-xs font-semibold">
                         <ClipboardDocumentIcon className="w-4 mr-1" />Copy
                     </button>
                 </div>
