@@ -3,16 +3,17 @@ import Main from './containers/Main'
 import Footer from './components/Footer';
 import DBConnectionModal from './components/DBConnectionModal'
 import { useEffect, useState } from 'react';
-// import './App.css';
 
 function App() {
   const [dbConnectionList, setDBConnectionList] = useState([{
+
     db: 'MySQL',
     host: 'localhost',
     port: '3306',
     database: 'mydb',
     user: 'user',
-    status: 'connected'
+    connected: true,
+    selected: true
   },
   {
     db: 'Postgres',
@@ -20,7 +21,8 @@ function App() {
     port: '5432',
     database: 'mydb',
     user: 'user',
-    status: 'disconnected'
+    connected: false,
+    selected: false
   }
 
   ])

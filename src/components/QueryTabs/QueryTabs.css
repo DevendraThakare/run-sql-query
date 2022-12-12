@@ -5,3 +5,7 @@
     font-weight: bolder;
     /* border-radius: 5px 5px 0 0; */
 }
+
+.react-tabs__tab-panel--selected{
+    display: block;
+}
