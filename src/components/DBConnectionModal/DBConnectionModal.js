@@ -24,7 +24,7 @@ Modal.setAppElement('#root');
 
 const DBConnectionModal = (props) => {
     let subtitle;
-    const { isClosable = true } = props
+    const { isClosable = true, onModalClose } = props
     const [modalIsOpen, setIsOpen] = React.useState(props.isOpen);
 
     function openModal() {
@@ -38,6 +38,9 @@ const DBConnectionModal = (props) => {
 
     function closeModal() {
         setIsOpen(false);
+        if(typeof onModalClose === 'function'){
+            onModalClose()
+        }
     }
 
     return (

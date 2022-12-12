@@ -2,7 +2,7 @@ import DBConnectionListItem from "../DBConnectionListItem"
 
 const DBConnectionList = (props) => {
     const { dbConnectionList, setShowConnectionModal } = props
-    return <div className="h-full border-b border-slate-200">
+    return <div className="h-full border-b border-slate-200 select-none">
         {dbConnectionList.map((connection, index) => {
             return <DBConnectionListItem key={`${connection.id}_${index}`} connection={connection} />
         })}

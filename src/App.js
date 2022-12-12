@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Main from './components/Main'
+import Main from './containers/Main'
 import Footer from './components/Footer';
 import DBConnectionModal from './components/DBConnectionModal'
 import { useEffect, useState } from 'react';
@@ -32,14 +32,12 @@ function App() {
     }
   }, [])
 
-
-
   return (
     <div className="App">
       <Header />
       <Main setShowConnectionModal={setShowConnectionModal} dbConnectionList={dbConnectionList} />
       <Footer />
-      {showConnectionModal ? <DBConnectionModal isClosable={dbConnectionList?.length} isOpen={true} /> : null}
+      {showConnectionModal ? <DBConnectionModal onModalClose={()=>setShowConnectionModal(false)} isClosable={dbConnectionList?.length} isOpen={true} /> : null}
     </div>
   );
 }

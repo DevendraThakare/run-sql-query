@@ -39,6 +39,16 @@
     /* cursor: col-resize; */
 }
 
+/* .Resizer.vertical::after{
+    content: '\2039';
+    border: 1px solid rgb(226, 232, 240);
+    padding: 0px 6px 2px 8px;
+    font-size: 20px;
+    margin-left: -11px;
+    border-radius: 3px;
+    background-color: rgb(248, 250, 252);
+} */
+
 /* .Resizer.vertical:hover {
     border-left: 5px solid rgba(203, 213, 225, 0.5);
     border-right: 5px solid rgba(203, 213, 225, 0.5);

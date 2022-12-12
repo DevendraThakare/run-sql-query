@@ -1,0 +1,97 @@
+[
+    {
+        "name": "Products",
+        "collumns": [
+            {
+                "name": "id",
+                "type": "int"
+            },
+            {
+                "name": "product_name",
+                "type": "varchar(50)"
+            },
+            {
+                "name": "mrp",
+                "type": "int"
+            },
+            {
+                "name": "discount",
+                "type": "int"
+            },
+            {
+                "name": "stock",
+                "type": "int"
+            },
+            {
+                "name": "is_active",
+                "type": "int"
+            }
+        ]
+    },
+    {
+        "name": "Customers",
+        "collumns": [
+            {
+                "name": "id",
+                "type": "int"
+            },
+            {
+                "name": "first_name",
+                "type": "varchar(50)"
+            },
+            {
+                "name": "last_name",
+                "type": "varchar(50)"
+            },
+            {
+                "name": "email",
+                "type": "varchar(50)"
+            },
+            {
+                "name": "gender",
+                "type": "varchar(10)"
+            },
+            {
+                "name": "age",
+                "type": "int"
+            },
+            {
+                "name": "age",
+                "type": "varchar(20)"
+            },
+            {
+                "name": "address",
+                "type": "varchar(100)"
+            }
+        ]
+    },
+    {
+        "name": "Orders",
+        "collumns": [
+            {
+                "name": "id",
+                "type": "int"
+            },
+            {
+                "name": "date_time",
+                "type": "int"
+            },
+            {
+                "name": "total_cost",
+                "type": "int"
+            },
+            {
+                "name": "status",
+                "type": "int"
+            },
+            {
+                "name": "customer_id",
+                "type": "int"
+            },
+            {
+                "name": "address",
+                "type": "varchar(100)"
+            }
+        ]
+    }
+]
