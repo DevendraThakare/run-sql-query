@@ -2,22 +2,22 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
     <g transform="translate(20 50)">
-        <circle cx="0" cy="0" r="6" fill="#5dc6ad" transform="scale(0.328985 0.328985)">
+        <circle cx="0" cy="0" r="6" fill="#ffffff" transform="scale(0.328985 0.328985)">
             <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" />
         </circle>
     </g>
     <g transform="translate(40 50)">
-        <circle cx="0" cy="0" r="6" fill="#5dc6ad" transform="scale(0.0511611 0.0511611)">
+        <circle cx="0" cy="0" r="6" fill="#1a4ed8" transform="scale(0.0511611 0.0511611)">
             <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" />
         </circle>
     </g>
     <g transform="translate(60 50)">
-        <circle cx="0" cy="0" r="6" fill="#5dc6ad" transform="scale(0.0462762 0.0462762)">
+        <circle cx="0" cy="0" r="6" fill="#ffffff" transform="scale(0.0462762 0.0462762)">
             <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" />
         </circle>
     </g>
     <g transform="translate(80 50)">
-        <circle cx="0" cy="0" r="6" fill="#5dc6ad" transform="scale(0.319717 0.319717)">
+        <circle cx="0" cy="0" r="6" fill="#1a4ed8" transform="scale(0.319717 0.319717)">
             <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite" />
         </circle>
     </g>
