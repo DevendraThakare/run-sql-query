@@ -1,6 +1,68 @@
-# Getting Started with Create React App
+# Getting Started with Run SQL Query App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demo is available at https://run-sql-query.vercel.app
+
+## Functionalities Implemented
+
+- See multiple database connection list
+- Add/Remove new Database connection
+- Text Editor to run Query
+- Copy and Run SQL command
+- Added Tabs to run multiple queries
+- Output SQL query result in tabular format
+- Download Query result in SVG format
+- Pane to show database tables and its collumns
+- Search field to search available tables in database
+
+## Framework and Plugins Used
+
+[React](https://reactjs.org/):
+
+[Tailwind](https://tailwindui.com/):
+Utility based styling framework used for styling the components.
+
+[@uiw/react-codemirror](https://github.com/uiwjs/react-codemirror):
+full-blown code-editor
+
+[@heroicons/react](https://heroicons.com/):
+Beautiful hand-crafted SVG icons
+
+[axios](https://axios-http.com/docs/intro):
+Axios is a promise-based HTTP Client for node.js and the browser. 
+
+[react-virtual](https://github.com/TanStack/virtual)
+Headless UI for virtualizing large scrollable elements list.
+
+## Page Speed Insights
+
+https://pagespeed.web.dev/report?url=https%3A%2F%2Frun-sql-query.vercel.app%2F&form_factor=desktop
+
+======== Desktop ==========
+
+Overall Prformance Score: 100
+
+First Contentful Paint(FCP): 0.2 s
+Time to Interactive: 0.5 s
+Speed Index: 0.5 s
+Total Blocking Time: 20 ms
+Largest Contentful Paint: 0.6 s
+Cumulative Layout Shift: 0
+
+======== Mobile ==========
+
+Overall Prformance Score: 83
+
+First Contentful Paint(FCP): 0.8 s
+Time to Interactive: 2.7 s
+Speed Index: 2.0 s
+Total Blocking Time: 340 ms
+Largest Contentful Paint: 2.7 s
+Cumulative Layout Shift: 0.177
+
+## Optimization Done
+
+[react-virtual](https://github.com/TanStack/virtual) is used For rendering large amount of rows  in the application without breaking the browser, or without crashing it.
 
 ## Available Scripts
 
@@ -11,60 +73,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
